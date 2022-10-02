@@ -1,6 +1,6 @@
-/* 全体 */
-
-
+/*
+全体
+****/
 html {
   height: 100%;
 }
@@ -55,12 +55,10 @@ html {
   background-color: #fff;
   color: #1af;
   border: 1px solid #1af;
-
 }
 
 .btn-reverse:hover {
   color: #1af;
-
 }
 
 a {
@@ -69,8 +67,13 @@ a {
   text-decoration: none;
 }
 
-/* サイド */
+.text-sm {
+  font-size: 0.7rem;
+}
 
+/*
+サイド
+****/
 .side .side-inner {
   position: sticky;
   height: 100vh;
@@ -123,8 +126,9 @@ a {
   }
 }
 
-
-/* メイン */
+/*
+メイン
+****/
 .main .main-header {
   padding: 20px;
   border-bottom: 1px solid #eef;
@@ -137,7 +141,9 @@ a {
   margin-bottom: 0;
 }
 
-/* ホーム */
+/*
+ホーム
+****/
 .home .tweet-post {
   display: flex;
   padding: 10px;
@@ -264,56 +270,57 @@ a {
   .bottom-area .btn {
       margin-top: 10px;
   }
-  
 }
 
-  /* 会員登録（ログイン画面共用） */
-
+/*
+会員登録（ログイン画面共用）
+****/
 body.signup {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 100%;
 }
 
 .signup {
-    background-color: #123;
-    color: #fff;
+  background-color: #123;
+  color: #fff;
 }
 
 .signup .form-signup {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
 }
 
 .signup .logo-white {
-    margin-bottom: 30px;
-    width: 50px;
+  margin-bottom: 30px;
+  width: 50px;
 }
 
 .signup h1 {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .signup input {
-    margin-bottom: 10px;
-    background-color: #123;
-    border-color: #456;
-    color: #fff;
+  margin-bottom: 10px;
+  background-color: #123;
+  border-color: #456;
+  color: #fff;
 }
 
 .signup input:focus {
-    background-color: #123;
-    border-color: #1af;
-    color: #fff;
+  background-color: #123;
+  border-color: #1af;
+  color: #fff;
 }
 
-/* ユーザー */
-
+/*
+ユーザー
+****/
 .profile .profile-area {
   padding: 25px;
 }
@@ -347,7 +354,6 @@ body.signup {
 .profile .profile-area .follow-follower {
   display: flex;
   padding: 15px 0 10px 0;
-
 }
 
 .profile .profile-area .follow-follower .follow-count {
@@ -363,7 +369,9 @@ body.signup {
   color: #778;
 }
 
-/* 検索 */
+/*
+検索
+****/
 .search .search-area {
   display: flex;
   padding: 15px;
@@ -375,14 +383,18 @@ body.signup {
   margin-right: 10px;
 }
 
-/* 通知 */
+/*
+通知
+****/
 .notification .notification-list .no-result {
   padding: 20px;
 }
+
 .notification .notification-list .notification-item {
   padding: 10px;
   border-bottom: 1px solid rgb(235, 238, 240);
 }
+
 .notification .notification-list .notification-item .user {
   width: 70px;
   padding: 5px 15px 10px 10px;
@@ -396,11 +408,10 @@ body.signup {
 
 .notification .notification-list .notification-item .content {
   width: 100%;
-
 }
 
 .notification .notification-list .notification-item .content p {
   font-size: 16px;
-  padding: 8px 0 0 ;
+  padding: 8px 0 0 0;
   margin-bottom: 8px;
 }
