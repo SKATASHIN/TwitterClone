@@ -32,7 +32,7 @@ CREATE TABLE `follows` (
   PRIMARY KEY (`id`),
   KEY `status` (`status`),
   KEY `follow_user_id` (`follow_user_id`),
-  KEY `follow_user_id_2` (`follow_user_id`)
+  KEY `followed_user_id` (`followed_user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -58,13 +58,13 @@ CREATE TABLE `likes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `notification`
+-- Table structure for table `notifications`
 --
 
-DROP TABLE IF EXISTS `notification`;
+DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `notification` (
+CREATE TABLE `notifications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `status` varchar(20) NOT NULL DEFAULT 'active',
   `received_user_id` int(11) NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE `tweets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `status` varchar(20) NOT NULL DEFAULT 'active',
   `user_id` int(11) NOT NULL,
-  `body` varchar(500) NOT NULL,
+  `body` varchar(140) NOT NULL,
   `image_name` varchar(500) DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime NOT NULL DEFAULT current_timestamp(),
@@ -135,4 +135,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-09 15:50:52
+-- Dump completed on 2022-10-12 14:16:53
