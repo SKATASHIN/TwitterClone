@@ -2,7 +2,7 @@
 ///////////////////////////////////////
 // 通知データを処理
 ///////////////////////////////////////
- 
+
 /**
     * 通知を作成
     *
@@ -17,17 +17,17 @@ function createNotification(array $data)
         echo 'MySQLの接続に失敗しました。：' . $mysqli->connect_error . "\n";
         exit;
     }
- 
+
     // ------------------------------------
     // SQLクエリを作成
     // ------------------------------------
     // 新規登録のクエリを作成
     $query = 'INSERT INTO notifications (received_user_id, sent_user_id, message) VALUES (?, ?, ?)';
     $statement = $mysqli->prepare($query);
- 
+
     // プレースホルダに値をセット
     $statement->bind_param('iis', $data['received_user_id'], $data['sent_user_id'], $data['message']);
- 
+
     // ------------------------------------
     // 戻り値を作成
     // ------------------------------------
@@ -40,14 +40,14 @@ function createNotification(array $data)
         $response = false;
         echo 'エラーメッセージ：' . $mysqli->error . "\n";
     }
- 
+
     // ------------------------------------
     // 後処理
     // ------------------------------------
     // DB接続を開放
     $statement->close();
     $mysqli->close();
- 
+
     return $response;
 }
 

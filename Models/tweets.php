@@ -56,15 +56,15 @@ function findTweet(int $tweet_id)
         echo 'MySQLの接続に失敗しました。：' . $mysqli->connect_error . "\n";
         exit;
     }
- 
+
     // エスケープ
     $tweet_id = $mysqli->real_escape_string($tweet_id);
- 
+
     // ------------------------------------
     // SQLクエリを作成
     // ------------------------------------
     $query = 'SELECT * FROM tweets WHERE status = "active" AND id = "' . $tweet_id . '"';
- 
+
     // ------------------------------------
     // 戻り値を作成
     // ------------------------------------
@@ -75,13 +75,13 @@ function findTweet(int $tweet_id)
         $response = false;
         echo 'エラーメッセージ：' . $mysqli->error . "\n";
     }
- 
+
     // ------------------------------------
     // 後処理
     // ------------------------------------
     // DB接続を開放
     $mysqli->close();
- 
+
     return $response;
 }
 

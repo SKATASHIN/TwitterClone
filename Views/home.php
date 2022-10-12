@@ -5,7 +5,7 @@
     <title>ホーム画面 / Twitterクローン</title>
     <meta name="description" content="ホーム画面です">
 </head>
- 
+
 <body class="home">
     <div class="container">
         <?php include_once('../Views/common/side.php'); ?>
@@ -46,5 +46,5 @@
     </div>
     <?php include_once('../Views/common/foot.php'); ?>
 </body>
- 
+
 </html>
