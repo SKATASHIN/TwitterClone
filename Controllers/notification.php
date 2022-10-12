@@ -1,13 +1,15 @@
 <?php
 ///////////////////////
-// サーチコントローラー
+// ノーティフィケーションコントローラー
 ///////////////////////
+
 // 設定を読み込み
 include_once '../config.php';
 // 便利な関数を読み込む
 include_once '../util.php';
+
 // ツイートデータ操作モデルを読み込む
-include_once '../Models/tweets.php';
+include_once '../Models/notifications.php';
 
 //ログインチェック
 $user = getUserSession();
@@ -17,20 +19,12 @@ if (!$user) {
     exit;
 }
 
-// 検索キーワードを取得
-$keyword = null;
-if (isset($_GET['keyword'])) {
-    $keyword = $_GET['keyword'];
-}
-
-
 // 表示用の変数
 $view_user = $user;
-$view_keyword = $keyword;
-// ツイート一覧
-$view_tweets = findTweets($user, $keyword);
+// 通知一覧
+$view_notifications = findNotifications($user['id']);
 
 
 
 // 画面表示
-include_once '../Views/search.php';
+include_once '../Views/notification.php';

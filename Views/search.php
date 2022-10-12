@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <?php include_once('../Views/common/head.php'); ?>
+    <?php  include_once('../Views/common/head.php'); ?>
     <title>検索画面 / Twitterクローン</title>
     <meta name="description" content="検索画面です">
 </head>
@@ -25,14 +24,13 @@
 
             <!-- 仕切りエリア -->
             <div class="ditch"></div>
-
             <!-- つぶやき一覧エリア -->
             <?php if (empty($view_tweets)) : ?>
                 <p class="p-3">ツイートがありません</p>
-            <?php else : ?>
+            <?php else: ?>
                 <div class="tweet-list">
-                    <?php foreach ($view_tweets as $view_tweet) : ?>
-                        <?php include('../Views/common/tweet.php'); ?>
+                    <?php foreach($view_tweets as $view_tweet): ?>
+                        <?php include('../Views/common/tweet.php') ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
@@ -40,3 +38,5 @@
     </div>
     <?php include_once('../Views/common/foot.php'); ?>
 </body>
+
+</html>
